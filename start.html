@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI CALCULATOR - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+        <div class="logo">
+    
+            BMI CALCULATOR
+        </div>
+    <nav>
+    
+    
+      
+    </nav>
+  </header>
+
+
+  <section id="home" class="hero">
+    <h1>WELCOME TO HEALTHY LIFE BMI CALCULATOR</h1>
+
+    
+    <h2>Check your Body Mass Index instantly!</h2>
+    <p>Discover your Body Mass Index (BMI) and learn what it means for your health. Our easy-to-use calculator provides instant insights to help you understand your body better.</p>
+
+
+    <div class="btn-wrapper">
+      <button onclick="window.location.href = 'h.html'" id="getStarted" class="btn">Get Started</button>
+    </div>
+  </section>
+
+  <section id="info" class="info-section">
+    <h2>What is BMI?</h2>
+    <p>
+      Body Mass Index (BMI) is a measure of body fat based on height and weight. 
+      It helps you understand whether you are underweight, normal, overweight, or obese.
+    </p>
+
+
+ 
+</div>
+
+  </section>
+
+  <script src="j.js"></script>
+  <div class="slide" id="bmi1">
+ 
+</div>
+
+<div class="slide" id="h" style="display:none;">
+
+</div>
+
+<script>
+function showSlide(id) {
+  document.querySelectorAll('.slide').forEach(s => s.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>

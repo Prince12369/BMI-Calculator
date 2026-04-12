@@ -1,5 +1,3 @@
-
-
 .title {
     text-align: center;
     color: #333;
@@ -11,20 +9,19 @@ body {
     margin: 0;
     padding: 20px;
     
-    /* --- NEW BACKGROUND PROPERTIES --- */
-    background-image: url('bmi.jpg'); /* Put your image file name here */
-    background-size: cover; /* Stretches the image to cover the whole window */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating like tiles */
-    background-attachment: fixed; /* Keeps the image still if the user scrolls */
+
+    background-image: url('bmi.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
 
 .big {
     max-width: 600px; 
     min-height: 550px;
     
-    /* --- KEEPING THE BOX CLEAN --- */
-    /* This makes the box solid white with a tiny bit of transparency (95%) */
+
     background-color: rgba(174, 169, 169, 0.565); 
     
     border: 3px solid #2c3e50;
@@ -32,10 +29,10 @@ body {
     margin: 20px auto;
     padding: 40px;
     
-    /* Made the shadow slightly darker so the box pops against the background */
+ 
     box-shadow: 0 15px 30px rgba(0,0,0,0.4); 
     
-    /* Flexbox to align contents perfectly */
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +80,7 @@ button:hover {
     background-color: #1a252f;
 }
 
-/* --- Result Box Styles --- */
+
 #result-box {
     margin-top: 30px;
     padding: 20px;
@@ -93,7 +90,7 @@ button:hover {
     text-align: center;
     color: white;
     box-sizing: border-box;
-    transition: all 0.5s ease; /* Smooth fade when colors change */
+    transition: all 0.5s ease;
 }
 
 .hidden {
@@ -104,7 +101,7 @@ button:hover {
     margin: 10px 0;
 }
 
-/* The Color Themes */
+
 .bg-blue { background-color: #abab1b; box-shadow: 0 4px 15px rgba(217, 245, 57, 0.4); }
 .bg-green { background-color: #2ecc71; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4); }
 .bg-orange { background-color: #e67e22; box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4); }
