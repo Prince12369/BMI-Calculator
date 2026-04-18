@@ -22,6 +22,11 @@ body {
   color: var(--light);
 }
 
+.recent{
+display: flex;
+background-color: #0a0909;
+}
+
 header {
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
