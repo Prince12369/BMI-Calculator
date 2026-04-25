@@ -4,6 +4,7 @@
     letter-spacing: 2px;
 }
 
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -99,6 +100,22 @@ button:hover {
 
 #result-box h2, #result-box h3, #result-box p {
     margin: 10px 0;
+}
+
+/* Add this to the bottom of c.css */
+
+.dashboard {
+    display: flex;
+    gap: 20px;            /* Adds space between the two boxes */
+    align-items: stretch; /* Forces both boxes to be the exact same height */
+    max-width: 1200px;    /* Prevents them from getting too wide on large screens */
+    margin: 0 auto;       /* Centers the whole dashboard on the page */
+    padding: 20px;
+}
+
+/* This makes sure both boxes take up exactly half the space */
+.bmi-box, .tracker-box {
+    flex: 1; 
 }
 
 

@@ -11,60 +11,61 @@
         <h1>BMI CALCULATOR</h1>
     </div>
     
-    <div class="big">
-        <div class="form-container">
-            <label for="age">AGE : </label>
-            <input type="number" id="age" placeholder="e.g. 20">
-            
-            <label for="gender">GENDER : </label>
-            <select id="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
+    <div class="dashboard">
+        
+        <div class="big bmi-box">
+            <div class="form-container" >
+                <label for="age" style="color: black;">AGE : </label>
+                <input type="number" id="age" placeholder="e.g. 20">
+                
+                <label for="gender" style="color: black;">GENDER : </label>
+                <select id="gender">
+                    <option value="male" >Male</option>
+                    <option value="female">Female</option>
+                </select>
 
-            <label for="weight">WEIGHT (kg) : </label>
-            <input type="number" id="weight" placeholder="e.g. 70">
-            
-            <label for="height">HEIGHT (cm) : </label>
-            <input type="number" id="height" placeholder="e.g. 175">
-            
-            <button onclick="calculateBMI()">Calculate</button>
+                <label for="weight" style="color: black;">WEIGHT (kg) : </label>
+                <input type="number" id="weight" placeholder="e.g. 70">
+                
+                <label for="height" style="color: black;">HEIGHT (cm) : </label>
+                <input type="number" id="height" placeholder="e.g. 175">
+                
+                <button onclick="calculateBMI()">Calculate</button>
+            </div>
+
+            <div id="result-box" class="hidden">
+                <h2 id="bmi-value"></h2>
+                <h3 id="bmi-category"></h3>
+                <p id="bmr-value"></p>
+                <p id="ideal-weight" style="font-weight: bold; margin-top: 15px;"></p>
+            </div>
         </div>
 
-        <div id="result-box" class="hidden">
-            <h2 id="bmi-value"></h2>
-            <h3 id="bmi-category"></h3>
-            <p id="bmr-value"></p>
-            <p id="ideal-weight" style="font-weight: bold; margin-top: 15px;"></p>
+        <div class = "container tracker-box" style="background-color: rgba(174, 169, 169, 0.565); border: 2px solid #333; padding: 40px; border-radius: 30px; ">
+            <h2 style="color: rgb(68, 43, 102);">Weight Goal Tracker</h2>
+
+            <input type="number" id="currentWeight" placeholder="Current Weight (kg)">
+            <input type="number" id="tracker-height" placeholder="Height (cm)">
+            <input type="number" id="targetWeight" placeholder="Target Weight (kg)">
+
+            <button onclick="calculateAndSave()">Calculate Progress</button>
+            <button onclick="resetTracker()" style="background-color: #d9534f; color: white; border-color: #d43f3a; margin-left: 10px;">Reset Data</button>
+
+            <div id="results" class="results-box"></div>
+
+            <h3 class="recent" style="color:  rgb(6, 78, 51);"> Recent History </h3>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Weight</th>
+                        <th>BMI</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody"></tbody>
+            </table>
         </div>
-    </div>
 
-    <div class="container" style="float: right; background-color: #f0f0f0; border: 2px solid #333; padding: 20px; border-radius: 8px;">
-        <h2 style="color: rgb(68, 43, 102);">Weight Goal Tracker</h2>
-        <button onclick="calculateAndSave()">Calculate Progress</button>
-    <button onclick="resetTracker()" style="background-color: #d9534f; color: white; border-color: #d43f3a; margin-left: 10px;">Reset Data</button>
-
-        <input type="number" id="currentWeight" placeholder="Current Weight (kg)">
-        <input type="number" id="tracker-height" placeholder="Height (cm)">
-        <input type="number" id="targetWeight" placeholder="Target Weight (kg)">
-
-        <button onclick="calculateAndSave()">Calculate Progress</button>
-
-        <div id="results" class="results-box"></div>
-
-        <h3 class="recent" style="color: rgb(6, 78, 51);">Recent History</h3>
-        <table id="historyTable">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Weight</th>
-                    <th>BMI</th>
-                </tr>
-            </thead>
-            <tbody id="historyBody"></tbody>
-        </table>
-    </div>
-
-    <script src="j.js"></script>
+    </div> <script src="j.js"></script>
 </body>
 </html>
