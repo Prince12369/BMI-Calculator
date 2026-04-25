@@ -127,3 +127,13 @@ function displayHistory() {
 function goToPage(){
     window.location.href="h.html";
 }
+
+function resetTracker() {
+    document.getElementById('currentWeight').value = '';
+    document.getElementById('tracker-height').value = ''; 
+    document.getElementById('targetWeight').value = '';
+
+    document.getElementById('results').innerHTML = '';
+
+    document.getElementById('historyBody').innerHTML = '';
+}

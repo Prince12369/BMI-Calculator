@@ -35,35 +35,24 @@
             <h2 id="bmi-value"></h2>
             <h3 id="bmi-category"></h3>
             <p id="bmr-value"></p>
-            <p id="ideal-weight">
-                <div id="result-box" class="hidden">
-                <h2 id="bmi-value"></h2>
-                <h3 id="bmi-category"></h3>
-                <p id="ideal-weight" style="font-weight: bold; margin-top: 15px;"></p> 
-                <p id="bmr-value"></p>
-        </div>
-            </p>
+            <p id="ideal-weight" style="font-weight: bold; margin-top: 15px;"></p>
         </div>
     </div>
 
-    <script src="j.js"></script>
-</body>
-</html>
-
-    <div class="container" style="float: right;">
-        <h2 style = "color: rgb(68, 43, 102)">Weight Goal Tracker</h2>
+    <div class="container" style="float: right; background-color: #f0f0f0; border: 2px solid #333; padding: 20px; border-radius: 8px;">
+        <h2 style="color: rgb(68, 43, 102);">Weight Goal Tracker</h2>
+        <button onclick="calculateAndSave()">Calculate Progress</button>
+    <button onclick="resetTracker()" style="background-color: #d9534f; color: white; border-color: #d43f3a; margin-left: 10px;">Reset Data</button>
 
         <input type="number" id="currentWeight" placeholder="Current Weight (kg)">
-
-        <input type="number" id="height" placeholder="Height (cm)">
-
+        <input type="number" id="tracker-height" placeholder="Height (cm)">
         <input type="number" id="targetWeight" placeholder="Target Weight (kg)">
 
         <button onclick="calculateAndSave()">Calculate Progress</button>
 
         <div id="results" class="results-box"></div>
 
-        <h3 class = "recent" , style = "color: rgb(6, 78, 51)">Recent History</h3>
+        <h3 class="recent" style="color: rgb(6, 78, 51);">Recent History</h3>
         <table id="historyTable">
             <thead>
                 <tr>
@@ -75,3 +64,7 @@
             <tbody id="historyBody"></tbody>
         </table>
     </div>
+
+    <script src="j.js"></script>
+</body>
+</html>
