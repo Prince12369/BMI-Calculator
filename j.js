@@ -71,21 +71,17 @@ function calculateBMI() {
     bmrValueText.innerText = `Est. Daily Resting Calories: ${Math.round(bmr)} kcal`;
 }
 
-
-// Load history on page start
 window.onload = displayHistory;
 
 function calculateAndSave() {
     const weight = parseFloat(document.getElementById('currentWeight').value);
-    const height = parseFloat(document.getElementById('height').value) / 100; // cm to m
+    const height = parseFloat(document.getElementById('height').value) / 100;
     const target = parseFloat(document.getElementById('targetWeight').value);
     
     if (!weight || !height || !target) return alert("Please fill all fields");
 
-    // 1. BMI Calculation
-    const bmi = (weight / (height * height)).toFixed(1);
 
-    // 2. Time-to-Goal Algorithm
+    const bmi = (weight / (height * height)).toFixed(1);
     const weightDiff = Math.abs(weight - target);
     const weeksRequired = Math.ceil(weightDiff / 0.5); // 0.5kg per week pace
     const action = weight > target ? "lose" : "gain";
@@ -97,7 +93,6 @@ function calculateAndSave() {
     `;
     document.getElementById('results').innerHTML = resultHTML;
 
-    // 3. Local Storage Management
     const entry = {
         date: new Date().toLocaleDateString(),
         weight: weight,
@@ -105,8 +100,8 @@ function calculateAndSave() {
     };
 
     let history = JSON.parse(localStorage.getItem('weightHistory')) || [];
-    history.unshift(entry); // Add to start
-    history = history.slice(0, 5); // Keep only last 5
+    history.unshift(entry);
+    history = history.slice(0, 5); 
     
     localStorage.setItem('weightHistory', JSON.stringify(history));
     displayHistory();
